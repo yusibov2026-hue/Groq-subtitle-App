@@ -1,0 +1,14 @@
+# Compilación
+build/
+app/build/
+.gradle/
+local.properties
+*.iml
+.idea/
+.kotlin/
+captures/
+*.apk
+*.aab
+
+# Hefesto
+.agent/

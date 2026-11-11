@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_principal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/contenedor_principal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nombre_app"
+            android:textColor="@color/acento"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/subtitulo_app"
+            android:textColor="@color/texto_secundario"
+            android:textSize="14sp" />
+
+        <!-- Card: API Key -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/fondo_tarjeta"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_api_key"
+                android:textColor="@color/texto_principal"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_api_key"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fondo_campo"
+                    android:hint="@string/hint_api_key"
+                    android:inputType="textPassword"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textColor="@color/texto_principal"
+                    android:textColorHint="@color/texto_terciario"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btn_guardar_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/fondo_boton_secundario"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="@string/btn_guardar_key"
+                    android:textAllCaps="false"
+                    android:textColor="@color/texto_principal"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_key_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/key_no_configurada"
+                android:textColor="@color/texto_terciario"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Card: File Selection -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/fondo_tarjeta"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_archivo"
+                android:textColor="@color/texto_principal"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_seleccionar_archivo"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/fondo_boton_secundario"
+                android:text="@string/btn_seleccionar_archivo"
+                android:textAllCaps="false"
+                android:textColor="@color/texto_principal"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_archivo_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/archivo_no_seleccionado"
+                android:textColor="@color/texto_secundario"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Card: Settings -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/fondo_tarjeta"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_opciones"
+                android:textColor="@color/texto_principal"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- Whisper Model -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/label_modelo_whisper"
+                android:textColor="@color/texto_secundario"
+                android:textSize="13sp" />
+
+            <Spinner
+                android:id="@+id/sp_whisper_modelo"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/fondo_campo" />
+
+            <!-- Source Language -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/label_idioma_origen"
+                android:textColor="@color/texto_secundario"
+                android:textSize="13sp" />
+
+            <Spinner
+                android:id="@+id/sp_idioma_origen"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/fondo_campo" />
+
+            <!-- Target Language -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/label_idioma_destino"
+                android:textColor="@color/texto_secundario"
+                android:textSize="13sp" />
+
+            <Spinner
+                android:id="@+id/sp_idioma_destino"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/fondo_campo" />
+
+            <!-- Translation Model -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/label_modelo_traduccion"
+                android:textColor="@color/texto_secundario"
+                android:textSize="13sp" />
+
+            <Spinner
+                android:id="@+id/sp_modelo_traduccion"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/fondo_campo" />
+        </LinearLayout>
+
+        <!-- Generate Button & Progress -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_generar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/fondo_boton"
+                android:text="@string/btn_generar"
+                android:textAllCaps="false"
+                android:textColor="@color/blanco"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progreso_barra"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_marginTop="10dp"
+                android:indeterminate="true"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_estado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/estado_listo"
+                android:textColor="@color/texto_secundario"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Card: Video Preview with Subtitle Overlay -->
+        <LinearLayout
+            android:id="@+id/seccion_vista_previa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/fondo_tarjeta"
+            android:orientation="vertical"
+            android:padding="14dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_titulo_reproductor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reproductor_titulo"
+                android:textColor="@color/texto_principal"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/contenedor_video"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/negro">
+
+                <VideoView
+                    android:id="@+id/video_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center" />
+
+                <!-- Subtitle overlay -->
+                <TextView
+                    android:id="@+id/tv_subtitulo_overlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/overlay_subtitulos"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:textColor="@color/blanco"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_play_pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/fondo_boton_secundario"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="@string/btn_reproducir"
+                    android:textAllCaps="false"
+                    android:textColor="@color/texto_principal"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btn_pantalla_completa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/fondo_boton_secundario"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="@string/btn_pantalla_completa"
+                    android:textAllCaps="false"
+                    android:textColor="@color/texto_principal"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Card: Subtitle Results & Editor -->
+        <LinearLayout
+            android:id="@+id/seccion_resultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/fondo_tarjeta"
+            android:orientation="vertical"
+            android:padding="14dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_titulo_segmentos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_resultado"
+                android:textColor="@color/texto_principal"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- Export Buttons Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_exportar_srt"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fondo_boton"
+                    android:text="@string/btn_guardar_archivo"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blanco"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btn_copiar_srt"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fondo_boton_secundario"
+                    android:text="@string/btn_copiar_srt"
+                    android:textAllCaps="false"
+                    android:textColor="@color/texto_principal"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btn_compartir"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fondo_boton_secundario"
+                    android:text="@string/btn_compartir"
+                    android:textAllCaps="false"
+                    android:textColor="@color/texto_principal"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- Container for editable segment rows -->
+            <LinearLayout
+                android:id="@+id/contenedor_segmentos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+    </LinearLayout>
+</ScrollView>

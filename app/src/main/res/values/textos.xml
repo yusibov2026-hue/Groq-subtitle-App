@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nombre_app">Groq Subtitles</string>
+    <string name="subtitulo_app">Генератор и переводчик субтитров на Groq API</string>
+    
+    <!-- API Key -->
+    <string name="titulo_api_key">API Ключ Groq</string>
+    <string name="hint_api_key">gsk_...</string>
+    <string name="btn_guardar_key">Сохранить</string>
+    <string name="key_guardada">✓ Ключ сохранён</string>
+    <string name="key_no_configurada">Ключ не задан (нужен для работы)</string>
+    
+    <!-- File selection -->
+    <string name="titulo_archivo">Видео или аудио файл</string>
+    <string name="btn_seleccionar_archivo">Выбрать файл</string>
+    <string name="archivo_no_seleccionado">Файл не выбран</string>
+    
+    <!-- Settings -->
+    <string name="titulo_opciones">Параметры генерации</string>
+    <string name="label_modelo_whisper">Модель Whisper (транскрибация):</string>
+    <string name="label_idioma_origen">Язык оригинала:</string>
+    <string name="label_idioma_destino">Язык перевода:</string>
+    <string name="label_modelo_traduccion">Модель перевода (LLM):</string>
+    
+    <!-- Actions -->
+    <string name="btn_generar">Сгенерировать субтитры</string>
+    <string name="estado_listo">Готов к работе</string>
+    
+    <!-- Results -->
+    <string name="titulo_resultado">Субтитры</string>
+    <string name="btn_copiar_srt">Копировать SRT</string>
+    <string name="btn_compartir">Поделиться</string>
+    <string name="btn_guardar_archivo">Экспорт .srt</string>
+    <string name="reproductor_titulo">Предпросмотр с субтитрами</string>
+    <string name="btn_reproducir">Воспроизвести</string>
+    <string name="btn_pausar">Пауза</string>
+    <string name="btn_pantalla_completa">На весь экран</string>
+    <string name="btn_salir_pantalla_completa">Свернуть</string>
+    
+    <!-- Toast & Messages -->
+    <string name="error_sin_api_key">Пожалуйста, введите ваш Groq API Key</string>
+    <string name="error_sin_archivo">Пожалуйста, выберите видео или аудио файл</string>
+    <string name="copiado_al_portapapeles">Субтитры скопированы в буфер обмена</string>
+    <string name="srt_guardado_exito">Файл субтитров сохранён</string>
+</resources>
