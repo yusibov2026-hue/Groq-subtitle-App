@@ -6,4 +6,4 @@
 - 2026-11-11: Добавлена нарезка длинного аудио на части <18 МБ (AAC remux, WAV split, decode в WAV), транскрибация по частям с восстановлением таймкодов и пакетный перевод по 40 сегментов. APK 871 KB собран.
 - 2026-11-11: Исправлена ошибка Groq 400 «Content-Type isn't multipart/form-data»: boundary содержал '=', что ломало разбор заголовка. Теперь boundary — валидный токен без '='.
 - 2026-11-11: Acento azul (#2EA8FF) en tema/botones, añadido botón de pantalla completa en el reproductor (inmersivo, salir con «Свернуть» o atrás). APK 873 KB firmado.
-- 2026-11-11: Proyecto subido a GitHub: https://github.com/yusibov2026-hue/Groq-subtitle-App (privado, rama main).
+- 2026-11-11: Proyecto subido a GitHub: https://github.com/yusibov2026-hue/Groq-subtitle-App (público, rama main).
