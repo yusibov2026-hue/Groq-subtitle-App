@@ -12,3 +12,6 @@ captures/
 
 # Hefesto
 .agent/
+
+# APK publicada en la raíz del repositorio
+!Groq-Subtitle-App.apk
