@@ -7,3 +7,4 @@
 - 2026-11-11: Исправлена ошибка Groq 400 «Content-Type isn't multipart/form-data»: boundary содержал '=', что ломало разбор заголовка. Теперь boundary — валидный токен без '='.
 - 2026-11-11: Acento azul (#2EA8FF) en tema/botones, añadido botón de pantalla completa en el reproductor (inmersivo, salir con «Свернуть» o atrás). APK 873 KB firmado.
 - 2026-11-11: Proyecto subido a GitHub: https://github.com/yusibov2026-hue/Groq-subtitle-App (público, rama main).
+- 2026-11-11: APK firmado publicado en la raíz del repositorio: Groq-Subtitle-App.apk (873 KB), excepción en .gitignore.
